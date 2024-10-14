@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+    <link rel="stylesheet" href="style.css">
+    
+ <head>
+    <body>  
+<!-- Header Image -->
+<div class="header-container">
+    <img src="https://mattcannon.games/codepen/pumpkin/jackogenerator.png" alt="AI Jack o'Lantern Generator" class="header-image" />
+  </div>
+  
+  <!-- Generator Inputs -->
+  <div class="container">
+    <div class="generator">
+      <!-- Eyes Selection -->
+      <div class="input-group">
+        <label for="eyes"><i class="fas fa-eye"></i> Ojos</label>
+        <select id="eyes">
+          <option value="triangle">Triangulo</option>
+          <option value="round">Redondo</option>
+          <option value="slanted">Inclinadp</option>
+          <option value="star-shaped">Estrella</option>
+          <option value="crescent">Creciente</option>
+          <option value="heart-shaped">Corazon</option>
+          <option value="diamond">Diamante</option>
+          <option value="spiral">Espiral</option>
+        </select>
+      </div>
+  
+      <!-- Nose Selection -->
+      <div class="input-group">
+        <label for="nose"><i class="fas fa-play" style="transform: rotate(32deg);"></i> Nariz</label>
+        <select id="nose">
+          <option value="triangle">Triangulo</option>
+          <option value="round">Redondo</option>
+          <option value="heart-shaped">Corazon</option>
+          <option value="none">Sin Nariz</option>
+          <option value="square">Cuadrada</option>
+          <option value="star-shaped">Estrella</option>
+          <option value="crescent">Creciente</option>
+        </select>
+      </div>
+  
+      <!-- Mouth Selection -->
+      <div class="input-group">
+        <label for="mouth"><i class="fas fa-smile"></i> Boca</label>
+        <select id="mouth">
+          <option value="grin">Sonrisa</option>
+          <option value="frown">Fruncido</option>
+          <option value="square">Cuadrada</option>
+          <option value="jagged">Con dientes</option>
+          <option value="curved">Curva</option>
+          <option value="stitched">Cosida</option>
+          <option value="fanged">Colmillos</option>
+          <option value="surprised">Sorpresa</option>
+          <option value="smirk">Afectada</option>
+        </select>
+  
+      </div>
+  
+      <!-- Accessories Selection -->
+      <div class="input-group">
+        <label for="accessories"><i class="fas fa-hat-wizard"></i> Accesorios</label>
+        <select id="accessories">
+          <option value="none">Ninguno</option>
+          <option value="witch hat">Sombrero de Bruja</option>
+          <option value="scarf">Bufanda</option>
+          <option value="glasses">Lentes</option>
+          <option value="sunglasses">Gafas de Sol</option>
+          <option value="beanie">Gorro</option>
+          <option value="bow tie">Corbata de Moño</option>
+          <option value="earrings">Pendientes</option>
+          <option value="mustache">Bigote</option>
+          <option value="pipe">Pipa</option>
+          <option value="monocle">Monoculo</option>
+          <option value="crown">Corona</option>
+          <option value="glasses and scarf">Gafas y Bufanda</option>
+          <option value="beanie and scarf">Gorro y Bufanda</option>
+          <option value="witch hat and glasses">Sombrero de Bruja y Lentes</option>
+          <option value="sunglasses and bow tie">Gafas de sol y Corbata de Moño</option>
+          <option value="sunglasses and scarf">Gafas de Sol y Bufanda</option>
+          <option value="sunglasses and beanie">Gafas de Sol y Gorro</option>
+        </select>
+      </div>
+  
+      <!-- Background Selection -->
+      <div class="input-group">
+        <label for="background"><i class="fas fa-tree"></i> Fondo</label>
+        <select id="background">
+          <option value="spooky forest">Bosque Espeluznante</option>
+          <option value="haunted house">Casa Embrujada</option>
+          <option value="graveyard">Cementerio</option>
+          <option value="misty night">Noche Brumosa</option>
+          <option value="full moon">Luna</option>
+          <option value="pumpkin patch">Huerto de Calabazas</option>
+          <option value="witch's cauldron">Caldero de Bruja</option>
+          <option value="abandoned castle">Castillo Abandonado</option>
+        </select>
+      </div>
+  
+      <!-- Art Style Selection -->
+      <div class="input-group">
+        <label for="style"><i class="fas fa-palette"></i> Estilo de arte</label>
+        <select id="style">
+          <option value="realistic">Realista</option>
+          <option value="cartoon">Cartoon</option>
+          <option value="watercolor">Acuarela</option>
+          <option value="oil painting">Oleo</option>
+          <option value="digital art">Arte digital</option>
+          <option value="sketchy">Incompleto</option>
+          <option value="pixel art">Pixel Art</option>
+          <option value="gothic">Gotico</option>
+          <option value="pop art">Arte pop</option>
+          <option value="abstract">Abstracto</option>
+          <option value="line drawing">Dibujo Lineal</option>
+          <option value="comic book">Comic</option>
+        </select>
+  
+      </div>
+  
+      <!-- Generate Button -->
+      <button id="generate">
+        <i class="fas fa-magic"></i> Conjura tu linterna
+      </button>
+    </div>
+  
+    <!-- Output Section -->
+    <div class="output">
+      <div id="message"></div>
+      <div id="loading-spinner" class="loader"></div>
+      <div id="image-container">
+        <img src="https://mattcannon.games/codepen/pumpkin/yourcreationhere.png" alt="Placeholder for Jack o'Lantern" />
+      </div>
+      <div id="utilities">
+        <a id="dlLink" href="#" target="_blank" style="display: none;">
+          <i class="fas fa-ghost"></i> Aislar Imagen
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <body>
+    <script src="funtion.js"></script>
+
+</head>
+</body> 
