@@ -28,24 +28,24 @@ document.addEventListener("DOMContentLoaded", function () {
           const img = new Image();
           img.onload = function () {
             displayGeneratedImage(this);
-            updateDownloadLink(imageUrl); // Use original URL for download
-            message.textContent = "Your Jack o'Lantern has been generated!";
+            updateDownloadLink(imageUrl); // utiliza esta url para descarga original 
+            message.textContent = "¡Tu Jack o'Lantern ha sido generado!";
             displayLoadingState(false);
           };
           img.onerror = function () {
-            throw new Error("Image failed to load");
+            throw new Error("La imagen no pudo cargarse");
           };
           img.src = URL.createObjectURL(blob);
         })
         .catch((error) => {
           displayLoadingState(false);
-          message.textContent = "Failed to generate the image. Please try again.";
+          message.textContent = "No se pudo generar la imagen. Por favor inténtalo de nuevo.";
           console.error("Error:", error);
         });
     });
   
-    function createDescription() {
-      return `Detailed Halloween pumpkin Jack o'Lantern, ${getEyesDescription(
+    function createDescription() { //aqui podemos describir lo que queremos 
+      return `Detailed Halloween pumpkin Jack O'Lantern, ${getEyesDescription(
         eyesInput.value
       )}, ${getNoseDescription(noseInput.value)}, ${getMouthDescription(mouthInput.value)}, ${getAccessoriesDescription(accessoriesInput.value)} in a ${getBackgroundDescription(backgroundInput.value)}, ${getStyleDescription(styleInput.value)} style, spooky, highly detailed`;
     }
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (isLoading) {
         imageContainer.innerHTML = "";
         dlLink.style.display = "none";
-        message.textContent = "Conjuring your Jack o'Lantern...";
+        message.textContent = "Conjurando tu Linterna...";
       }
     }
   
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "pixel art": "pixel art style",
         gothic: "dark, gothic style",
         "pop art": "bold, pop art style",
-        abstract: "abstract art style", // New art styles
+        abstract: "abstract art style", // nuevo estilo de arte
         "line drawing": "minimalist line drawing style",
         "comic book": "comic book style"
       };
